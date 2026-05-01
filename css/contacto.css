@@ -1,0 +1,50 @@
+/* ================================================================
+   CONTACTO — Redes sociales e información de contacto
+   ================================================================ */
+
+#contacto {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-mid) 50%, #0f2060 100%);
+  text-align: center;
+}
+
+.contact-info { margin-bottom: 2.5rem; }
+
+.contact-info p { color: rgba(255, 255, 255, 0.85); font-size: 1rem; margin: 0.5rem 0; }
+
+#contacto h3 { color: var(--accent-light); margin-bottom: 1.5rem; font-size: 1.2rem; }
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.social-links li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-pill);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  transition: var(--transition);
+  backdrop-filter: blur(6px);
+}
+
+.social-links li a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px var(--accent-glow);
+}
+
+.social-icon { font-weight: 900; font-size: 1rem; }
+
+.instagram-handle { color: rgba(255, 255, 255, 0.5); font-size: 0.85rem; letter-spacing: 0.05em; }

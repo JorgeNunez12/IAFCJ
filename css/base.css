@@ -1,0 +1,83 @@
+/* ================================================================
+   BASE — Variables, Reset y Tipografía
+   ================================================================ */
+
+
+/* ----------------------------------------------------------------
+   Variables y paleta de color
+   ---------------------------------------------------------------- */
+:root {
+  --primary:        #0c1445;
+  --primary-mid:    #162260;
+  --primary-light:  #1e3a8a;
+  --accent:         #c8a951;
+  --accent-light:   #f0d060;
+  --accent-glow:    rgba(200, 169, 81, 0.35);
+
+  --white:          #ffffff;
+  --off-white:      #f7f8fc;
+  --light-blue:     #eef2ff;
+  --text-dark:      #0f172a;
+  --text-mid:       #374151;
+  --text-muted:     #6b7280;
+
+  --shadow-sm:      0 2px 8px  rgba(12, 20, 69, 0.08);
+  --shadow-card:    0 6px 24px rgba(12, 20, 69, 0.11);
+  --shadow-hover:   0 16px 48px rgba(12, 20, 69, 0.20);
+  --shadow-dark:    0 8px 32px rgba(0, 0, 0, 0.35);
+
+  --radius:         14px;
+  --radius-sm:      8px;
+  --radius-pill:    50px;
+  --transition:     all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast:all 0.25s ease;
+
+  --nav-height:     78px;
+  --max-width:      1200px;
+}
+
+
+/* ----------------------------------------------------------------
+   Reset
+   ---------------------------------------------------------------- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-dark);
+  background: var(--white);
+  overflow-x: hidden;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+img   { max-width: 100%; display: block; }
+a     { text-decoration: none; color: inherit; }
+ul    { list-style: none; }
+button{ font-family: inherit; }
+iframe{ display: block; }
+
+
+/* ----------------------------------------------------------------
+   Tipografía
+   ---------------------------------------------------------------- */
+h1, h2, h3, h4, h5 {
+  font-family: 'Cinzel', serif;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+}
+
+h2 { font-size: clamp(1.75rem, 4vw, 2.6rem); }
+h3 { font-size: clamp(1.1rem, 2.2vw, 1.4rem); }
+
+p  { color: var(--text-mid); }

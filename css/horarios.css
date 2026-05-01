@@ -1,0 +1,112 @@
+/* ================================================================
+   HORARIOS — Horarios de Servicios
+   ================================================================ */
+
+#horarios {
+  background: linear-gradient(160deg, var(--primary) 0%, var(--primary-mid) 60%, #10245a 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 5.5rem 2rem;
+}
+
+#horarios::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: rgba(200, 169, 81, 0.06);
+  pointer-events: none;
+}
+
+.horarios-title { color: var(--white) !important; }
+
+.horarios-title::after {
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+}
+
+.horarios-subtitulo {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+
+.horarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.horario-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(200, 169, 81, 0.3);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: var(--transition);
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+.horario-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(200, 169, 81, 0.1) 0%, transparent 60%);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.horario-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.3);
+}
+
+.horario-card:hover::before { opacity: 1; }
+
+.horario-icono { font-size: 2.4rem; margin-bottom: 0.75rem; display: block; }
+
+.horario-dia {
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.horario-nombre {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.horario-hora {
+  font-family: 'Cinzel', serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--accent-light);
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+}
+
+.horario-hora--alt {
+  font-size: 1.2rem;
+  color: rgba(240, 208, 96, 0.7);
+  margin-top: 0.25rem;
+}
+
+.horario-card--escuela { border-color: rgba(200, 169, 81, 0.55); }

@@ -1,0 +1,49 @@
+/* ================================================================
+   MULTIMEDIA — Transmisiones en Vivo
+   ================================================================ */
+
+#multimedia {
+  background: linear-gradient(160deg, var(--primary) 0%, #0a1230 60%, #10245a 100%);
+}
+
+.multimedia-facebook { max-width: 860px; margin: 0 auto; }
+
+.media-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+}
+
+.media-card:hover {
+  background: rgba(255, 255, 255, 0.11);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4);
+  border-color: rgba(200, 169, 81, 0.3);
+}
+
+.media-card--full { width: 100%; }
+
+.media-card h3 { color: var(--accent-light); margin-bottom: 1.25rem; }
+
+.media-card p   { color: rgba(255, 255, 255, 0.7); }
+
+.media-card iframe {
+  width: 100%;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.media-note { font-size: 0.82rem; margin-top: 0.75rem; }
+
+.media-fb-link {
+  color: var(--accent-light);
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.media-fb-link:hover { color: var(--accent); }

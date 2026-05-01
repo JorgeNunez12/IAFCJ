@@ -1,0 +1,63 @@
+/* ================================================================
+   LOGO LOCAL — Identidad visual de la congregación
+   ================================================================ */
+
+#logo-local {
+  background: linear-gradient(135deg, var(--light-blue) 0%, var(--white) 100%);
+  padding: 5rem 2rem;
+}
+
+.logo-local-inner {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.logo-local-imagen { flex: 0 0 auto; text-align: center; }
+
+.logo-local-imagen img {
+  max-width: 280px;
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-hover);
+  transition: var(--transition);
+}
+
+.logo-local-imagen img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 24px 64px rgba(12, 20, 69, 0.2);
+}
+
+.logo-local-texto { flex: 1; min-width: 260px; }
+
+.logo-local-texto h2 {
+  color: var(--primary);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: 0.5rem;
+}
+
+.logo-subtitulo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.logo-local-texto p:not(.logo-subtitulo) {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-mid);
+  margin-bottom: 1.5rem;
+}
+
+.logo-verse {
+  border-left: 4px solid var(--accent);
+  padding-left: 1.25rem;
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}

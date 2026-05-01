@@ -1,0 +1,62 @@
+/* ================================================================
+   ADMINISTRACIÓN — Ofrendas y Peticiones de Oración
+   ================================================================ */
+
+#administracion { background: var(--white); }
+
+#administracion article {
+  background: var(--off-white);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(12, 20, 69, 0.07);
+  transition: var(--transition);
+}
+
+#administracion article:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-5px);
+  border-color: rgba(200, 169, 81, 0.3);
+}
+
+#administracion article h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+#administracion article > p { font-size: 0.93rem; margin-bottom: 1.5rem; }
+
+.btn-donar {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+  color: var(--primary);
+  border: none;
+  border-radius: var(--radius-pill);
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 6px 24px var(--accent-glow);
+}
+
+.btn-donar:hover { transform: translateY(-4px) scale(1.04); box-shadow: 0 14px 36px var(--accent-glow); }
+
+.btn-donar:active { transform: translateY(-1px) scale(1.02); }
+
+.events-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 0.92rem;
+  color: var(--text-mid);
+  transition: var(--transition-fast);
+}
+
+.events-list li:hover { color: var(--primary); padding-left: 6px; }

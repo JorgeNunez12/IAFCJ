@@ -1,0 +1,98 @@
+/* ================================================================
+   RESPONSIVE — Tableta (≤ 960px) y Móvil (≤ 600px)
+   ================================================================ */
+
+
+/* ----------------------------------------------------------------
+   Tableta: ≤ 960px
+   ---------------------------------------------------------------- */
+@media (max-width: 960px) {
+  :root { --nav-height: 68px; }
+
+  /* Nav */
+  .nav-toggle { display: flex; }
+
+  .nav-links {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0; right: 0;
+    background: var(--primary);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.25rem 0 2rem;
+    transform: translateY(-110%);
+    transition: transform 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(200, 169, 81, 0.2);
+  }
+
+  .nav-links.open { transform: translateY(0); }
+
+  .nav-links li a {
+    font-size: 0.95rem;
+    padding: 0.9rem 2rem;
+    border-radius: 0;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .nav-links li a::after { display: none; }
+
+  .nav-links li a:hover { background: rgba(200, 169, 81, 0.12); padding-left: 2.5rem; }
+
+  /* Carrusel */
+  .slide-content { left: 5%; right: 5%; }
+  #prev { left: 0.75rem; }
+  #next { right: 0.75rem; }
+
+  /* Layout */
+  .articles-grid { grid-template-columns: 1fr; }
+
+  /* Logo local */
+  .logo-local-inner { flex-direction: column; gap: 2rem; text-align: center; }
+  .logo-local-imagen img { max-width: 220px; }
+  .logo-verse { text-align: left; }
+
+  /* Eventos */
+  .evento-principal { grid-template-columns: 1fr; }
+  .evento-imagen    { min-height: 260px; }
+}
+
+
+/* ----------------------------------------------------------------
+   Móvil: ≤ 600px
+   ---------------------------------------------------------------- */
+@media (max-width: 600px) {
+  section { padding: 4rem 1.25rem; }
+
+  /* Carrusel */
+  .slide-content h2 { font-size: clamp(1.5rem, 7vw, 2.2rem); }
+  #prev, #next { width: 40px; height: 40px; font-size: 0.9rem; }
+
+  /* Video hero */
+  .video-logo { height: 80px; }
+
+  /* Horarios */
+  .horarios-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Visita */
+  .schedule-list li { flex-direction: column; align-items: flex-start; gap: 0.1rem; }
+
+  /* Eventos */
+  .propaganda-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Galería */
+  .gallery-masonry { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid    { grid-template-columns: repeat(2, 1fr); }
+
+  /* Lightbox */
+  .lightbox-prev { left: 0.5rem; }
+  .lightbox-next { right: 0.5rem; }
+
+  /* Células */
+  .celulas-input-row { flex-direction: column; }
+
+  /* Contacto */
+  .social-links { flex-direction: column; align-items: center; }
+}
