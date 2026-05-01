@@ -215,7 +215,6 @@
           <div class="horario-dia">Domingo</div>
           <div class="horario-nombre">Escuela Bíblica</div>
           <div class="horario-hora">10:00 AM</div>
-          <div class="horario-hora horario-hora--alt">5:00 PM</div>
         </div>
 
         <div class="horario-card">
@@ -244,7 +243,7 @@
           <h3>Ubicación</h3>
           <p class="location-text">IAFCJ El Dorado — Frente al IMSS, El Dorado, Sinaloa</p>
           <iframe
-            src=""
+            src="https://maps.google.com/maps?q=Ignacio+Allende+691,+Mariano+Escobedo,+80450+Eldorado,+Sin.&z=17&output=embed&hl=es"
             width="100%"
             height="280"
             style="border:0;"
@@ -264,9 +263,6 @@
 
             <label for="visitTel">Teléfono</label>
             <input type="tel" id="visitTel" name="telefono" placeholder="ej. 695-123-4567">
-
-            <label for="visitCorreo">Correo</label>
-            <input type="email" id="visitCorreo" name="correo" placeholder="tu@correo.com">
 
             <label for="visitFecha">Fecha planeada</label>
             <input type="date" id="visitFecha" name="fecha">
@@ -295,9 +291,9 @@
           <div class="ministry-icon">🏘</div>
           <h3>Red de Células</h3>
           <ul>
-            <li>Sector Norte</li>
-            <li>Sector Sur</li>
-            <li>Sector Centro</li>
+            <li>Celula el higueral</li>
+            <li>Celula El conchal</li>
+            <li>Celula Eldorado</li>
             <li>Célula Juvenil</li>
           </ul>
         </article>
@@ -311,7 +307,6 @@
           </p>
           <ul>
             <li>Domingo 10:00 AM</li>
-            <li>Domingo 5:00 PM</li>
           </ul>
         </article>
 
@@ -381,6 +376,17 @@
             <li>🕖&nbsp; 6:00 PM</li>
             <li>📍&nbsp; IAFCJ El Dorado, Frente al IMSS</li>
           </ul>
+
+          <!-- Contador regresivo KABOD -->
+          <div class="kabod-countdown" id="kabodCountdown">
+            <p class="countdown-label">Faltan</p>
+            <div class="countdown-boxes">
+              <div class="countdown-box"><span id="cdDias">00</span><small>Días</small></div>
+              <div class="countdown-box"><span id="cdHoras">00</span><small>Horas</small></div>
+              <div class="countdown-box"><span id="cdMinutos">00</span><small>Min</small></div>
+              <div class="countdown-box"><span id="cdSegundos">00</span><small>Seg</small></div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -486,31 +492,27 @@
 
       <h2 class="section-title section-title--light" data-animate="fade-up">Recursos Multimedia</h2>
 
-      <div class="articles-grid">
+      <div class="multimedia-facebook">
 
-        <article class="media-card" data-animate="fade-up" data-delay="100">
+        <article class="media-card media-card--full" data-animate="fade-up" data-delay="100">
           <h3>Transmisiones en Vivo</h3>
-          <!-- Pega aquí tu URL de YouTube embed -->
           <iframe
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhermannalexander.sotomeza&tabs=videos&width=800&height=420&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false"
             width="100%"
-            height="220"
-            src=""
-            title="Transmisión en vivo IAFCJ El Dorado"
+            height="420"
+            style="border:none;overflow:hidden"
+            scrolling="no"
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            title="Transmisiones en vivo — Pastor Hermann Alexander Soto Meza">
           </iframe>
-          <p class="media-note">Síguenos en YouTube para nuestros servicios en vivo.</p>
-        </article>
-
-        <article class="media-card" data-animate="fade-up" data-delay="200">
-          <h3>Archivo de Sermones</h3>
-          <ul class="sermon-list">
-            <li>Fe — Fundamentos de la vida cristiana</li>
-            <li>Familia — El diseño de Dios</li>
-            <li>Salvación — El plan redentor</li>
-            <li>Santidad — Viviendo para el Señor</li>
-          </ul>
+          <p class="media-note">
+            Síguenos en Facebook para nuestras transmisiones en vivo cada servicio. &nbsp;
+            <a href="https://www.facebook.com/hermannalexander.sotomeza/" target="_blank" rel="noopener" class="media-fb-link">
+              Ver perfil del pastor ↗
+            </a>
+          </p>
         </article>
 
       </div>

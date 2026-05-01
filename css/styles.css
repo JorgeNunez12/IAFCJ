@@ -825,6 +825,26 @@ audio {
   margin-top: 0.75rem;
 }
 
+.multimedia-facebook {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.media-card--full {
+  width: 100%;
+}
+
+.media-fb-link {
+  color: var(--accent-light);
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.media-fb-link:hover {
+  color: var(--accent);
+}
+
 /* Lista de sermones */
 .sermon-list li {
   padding: 0.6rem 0;
@@ -1821,13 +1841,13 @@ footer p {
 }
 
 .celulas-header h3 {
-  color: var(--accent-light);
+  color: var(--primary);
   font-size: clamp(1.3rem, 3vw, 1.8rem);
   margin-bottom: 0.5rem;
 }
 
 .celulas-header p {
-  color: rgba(255, 255, 255, 0.68);
+  color: var(--text-mid);
   font-size: 0.95rem;
 }
 
@@ -1874,14 +1894,14 @@ footer p {
   left: 0;
   right: 0;
   height: 1px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.12);
 }
 
 .celulas-divider span {
   position: relative;
-  background: var(--primary-mid);
+  background: var(--off-white);
   padding: 0 1rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-muted);
   font-size: 0.85rem;
 }
 
@@ -1940,6 +1960,69 @@ footer p {
   font-size: 0.9rem;
   text-align: center;
   padding: 1rem;
+}
+
+
+/* ----------------------------------------------------------------
+   CONTADOR REGRESIVO KABOD
+   ---------------------------------------------------------------- */
+.kabod-countdown {
+  margin-top: 1.75rem;
+}
+
+.countdown-label {
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.countdown-boxes {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.countdown-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(200, 169, 81, 0.45);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.9rem;
+  text-align: center;
+  min-width: 68px;
+  transition: var(--transition);
+}
+
+.countdown-box:hover {
+  background: rgba(200, 169, 81, 0.12);
+  border-color: var(--accent);
+}
+
+.countdown-box span {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--accent-light);
+  line-height: 1;
+}
+
+.countdown-box small {
+  display: block;
+  font-size: 0.62rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.3rem;
+}
+
+.countdown-terminado {
+  color: var(--accent-light);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-top: 1rem;
 }
 
 

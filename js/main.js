@@ -11,6 +11,31 @@ document.addEventListener('DOMContentLoaded', function () {
   Gallery.init();
   Cells.init();
 
+  /* — Contador regresivo: Congreso KABOD (15 Mayo 2026, 6:00 PM) — */
+  (function () {
+    var target    = new Date('2026-05-15T18:00:00');
+    var container = document.getElementById('kabodCountdown');
+    var cdDias    = document.getElementById('cdDias');
+    var cdHoras   = document.getElementById('cdHoras');
+    var cdMinutos = document.getElementById('cdMinutos');
+    var cdSegundos= document.getElementById('cdSegundos');
+    if (!container || !cdDias) return;
+
+    function tick() {
+      var diff = target - new Date();
+      if (diff <= 0) {
+        container.innerHTML = '<p class="countdown-terminado">¡El Congreso KABOD ha comenzado! 🙌</p>';
+        return;
+      }
+      cdDias.textContent     = String(Math.floor(diff / 86400000)).padStart(2, '0');
+      cdHoras.textContent    = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0');
+      cdMinutos.textContent  = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+      cdSegundos.textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
+
   /* — Formulario: Primera Visita — */
   const visitForm = document.getElementById('visitForm');
   if (visitForm) {
