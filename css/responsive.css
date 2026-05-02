@@ -7,14 +7,16 @@
    Tableta: ≤ 960px
    ---------------------------------------------------------------- */
 @media (max-width: 960px) {
-  :root { --nav-height: 68px; }
+  :root { --nav-height: 64px; }
 
   /* Nav */
   .nav-toggle { display: flex; }
 
+  .nav-logo { height: 40px; }
+
   .nav-links {
     position: fixed;
-    top: var(--nav-height);
+    top: calc(var(--nav-height) + env(safe-area-inset-top, 0px));
     left: 0; right: 0;
     background: var(--primary);
     flex-direction: column;
