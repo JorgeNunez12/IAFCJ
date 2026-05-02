@@ -39,30 +39,43 @@ document.addEventListener('DOMContentLoaded', function () {
   /* — Formulario: Primera Visita — */
   const visitForm = document.getElementById('visitForm');
   if (visitForm) {
-    visitForm.addEventListener('submit', function (e) {
+    visitForm.addEventListener('submit', async function (e) {
       e.preventDefault();
-      const nombre = visitForm.querySelector('[name="nombre"]').value.trim();
+      const nombre   = visitForm.querySelector('[name="nombre"]').value.trim();
+      const telefono = visitForm.querySelector('[name="telefono"]').value.trim();
+      const fecha    = visitForm.querySelector('[name="fecha"]').value;
       if (!nombre) {
         alert('Por favor escribe tu nombre.');
         return;
       }
-      alert('¡Gracias, ' + nombre + '! Nos alegra que planees visitarnos. Que Dios te bendiga.');
-      visitForm.reset();
+      try {
+        await window.guardarVisita({ nombre, telefono, fecha });
+        alert('¡Gracias, ' + nombre + '! Nos alegra que planees visitarnos. Que Dios te bendiga.');
+        visitForm.reset();
+      } catch (err) {
+        alert('No se pudo guardar. Verifica tu conexión e inténtalo de nuevo.');
+      }
     });
   }
 
   /* — Formulario: Petición de Oración — */
   const prayerForm = document.getElementById('prayerForm');
   if (prayerForm) {
-    prayerForm.addEventListener('submit', function (e) {
+    prayerForm.addEventListener('submit', async function (e) {
       e.preventDefault();
+      const nombre   = prayerForm.querySelector('[name="nombreOracion"]').value.trim();
       const peticion = prayerForm.querySelector('[name="peticion"]').value.trim();
       if (!peticion) {
         alert('Por favor escribe tu petición.');
         return;
       }
-      alert('Tu petición ha sido recibida. Estaremos orando por ti. ¡Dios te bendiga!');
-      prayerForm.reset();
+      try {
+        await window.guardarOracion({ nombre, peticion });
+        alert('Tu petición ha sido recibida. Estaremos orando por ti. ¡Dios te bendiga!');
+        prayerForm.reset();
+      } catch (err) {
+        alert('No se pudo guardar. Verifica tu conexión e inténtalo de nuevo.');
+      }
     });
   }
 
