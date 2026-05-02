@@ -9,7 +9,11 @@
   right: 0;
   z-index: 1000;
   height: var(--nav-height);
-  transition: var(--transition);
+  transition: var(--transition), transform 0.35s ease;
+}
+
+#mainHeader.nav-hidden {
+  transform: translateY(-100%);
 }
 
 #mainHeader::before {

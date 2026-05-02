@@ -11,17 +11,35 @@ const Navigation = (function () {
 
   /* — Efecto scroll en el header — */
   function bindScrollEffect(header) {
+    var lastY = 0;
+
     function onScroll() {
-      if (window.scrollY > SCROLL_THRESHOLD) {
+      var y = window.scrollY;
+
+      if (y > SCROLL_THRESHOLD) {
         header.classList.add('scrolled');
       } else {
         header.classList.remove('scrolled');
       }
+
+      /* Auto-ocultar al bajar en móvil, mostrar al subir */
+      if (window.innerWidth <= 960) {
+        var menuOpen = document.getElementById('navLinks').classList.contains('open');
+        if (!menuOpen) {
+          if (y > lastY && y > 120) {
+            header.classList.add('nav-hidden');
+          } else {
+            header.classList.remove('nav-hidden');
+          }
+        }
+      } else {
+        header.classList.remove('nav-hidden');
+      }
+
+      lastY = y;
     }
 
     window.addEventListener('scroll', onScroll, { passive: true });
-
-    /* Evaluar estado inicial por si la página abre scrolleada */
     onScroll();
   }
 
