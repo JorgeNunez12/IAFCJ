@@ -168,7 +168,8 @@ const Cells = (function () {
             btnGeo.textContent = '📍  Usar mi ubicación actual';
             btnGeo.disabled = false;
             mostrarError('No se pudo obtener tu ubicación. Escribe tu colonia en el campo de abajo.');
-          }
+          },
+          { timeout: 10000, maximumAge: 60000 }
         );
       });
     }
