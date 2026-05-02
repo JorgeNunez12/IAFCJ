@@ -136,7 +136,7 @@ audio {
 .celula-result { margin-top: 1.75rem; }
 
 .celula-card {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--primary);
   border: 2px solid var(--accent);
   border-radius: var(--radius);
   padding: 1.5rem;
