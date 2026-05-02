@@ -12,6 +12,11 @@
 [data-animate="fade-right"] { transform: translateX(44px); }
 [data-animate="zoom-in"]    { transform: scale(0.90); }
 
+@media (max-width: 960px) {
+  [data-animate="fade-left"]  { transform: translateX(-20px); }
+  [data-animate="fade-right"] { transform: translateX(20px); }
+}
+
 [data-animate].animated { opacity: 1; transform: none; }
 
 [data-delay="100"] { transition-delay: 0.1s; }
